@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/img/">
     <link rel="stylesheet" href="./assets/font/themify-icons-font/themify-icons/themify-icons.css">
     <title>Document</title>
 </head>
@@ -15,25 +14,31 @@
     <div class="main">
         <div class="header">
 
-            <uli id="nav">
-                <li><a href="">Home</a></li>
-                <li><a href="">TOUR</a></li>
-                <li><a href="">BAND</a></li>
-                <li><a href="">Contact</a></li>
-                <li><a href="">
+            <ul id="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#tour">TOUR</a></li>
+                <li><a href="#band">BAND</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">
                     More
                         <i class="nav-arrow-down ti-arrow-circle-down"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a href="">Merchandise</a></li>
-                        <li><a href="">Extras</a></li>
-                        <li><a href="">Media</a></li>
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
                     </ul>
                 </li>
-            </uli>
+            </ul>
             <!-- search -->
-            <div class="search-bth">
-                <i class="search-icon ti-search"></i>
+            <div class="search-box">
+                <input class="search-txt" type="text" name="" placeholder="Type to Search">
+                <a class="search-bth" href="#">
+                    <i class="search-icon ti-search"></i>
+                </a>
+            </div>
+            <div id="mobile-menu" class="menu-mobile-bth">
+                <i class="ti-menu"></i>
             </div>
             
         </div>
@@ -45,36 +50,33 @@
             </div>
             
         </div>
-        <div class="content">
+        <div  id="band" class="content">
             <!-- about-section -->
             <div class="content-section">
-                <h2 class="section-heading">THE BAND</h2>
+                <h2  class="section-heading">THE BAND</h2>
                 <p class="section-sub-heading"><i>We love music</i>
                     </p>
                 <p class="about-text">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             
                 <div class="row member">
-                    <div class="col col-third text-center">
-                        <div class="name">Name 1</div>
-                        <img src="./assets/img/member/bandmember.jpg" class="imgband"alt="name">
+                    <div class="col col-third text-center box-name">
+                            <div class="name">Name 1</div>
+                            <img src="./assets/img/member/bandmember.jpg" class="imgband"alt="name">
                     </div>
-
-                    <div class="col col-third text-center">
-                        
+                    <div class="col col-third text-center box-name">
                         <div class="name">Name 2</div>
                         <img src="./assets/img/member/bandmember.jpg" class="imgband" alt="name">
                     </div>
-
-                    <div class="col col-third text-center">
+                    <div class="col col-third text-center box-name">
                         
                         <div class="name">Name 3</div>
                         <img src="./assets/img/member/bandmember.jpg" class="imgband" alt="name">
                     </div>
-                    <div class="clear"></div>
+                    
                 </div>
             </div>
             <!-- tour-section -->
-            <div class="tour-section">
+            <div id="tour" class="tour-section">
                 <div class="content-section">
                     <h2 class="section-heading text-white">TOUR DATES</h2>
                     <p class="section-sub-heading text-white">
@@ -118,8 +120,8 @@
                 </div>
             </div>
 
-            <div class="content-section">
-                    <h2 class="section-heading">THE BAND</h2>
+            <div id="contact" class="content-section">
+                    <h2 class="section-heading">CONTACT</h2>
                     <div class="section-sub-heading"><i>Fan? Drop a note!</i></div>
                     <div class="box-contact">
                         <div class=" col col-half text-contact">
@@ -132,11 +134,12 @@
                                 <div class="row input-top">
                                     <div class="col col-half padding-input">
                                         <input type="text" name="" placeholder="Name" id="" class="form-control">
-                                    </div>
+                                    </div>  
                                     <div class="col col-half padding-input">
                                         <input type="email" name="" placeholder="Email" id="" class="form-control">
                                     </div>
                                 </div>
+                                
                                 <div class="row">
                                     <div class="col col-full">       
                                         <input type="text" name="" placeholder="Message" id="" class="form-control">
@@ -148,19 +151,18 @@
                     </div>               
             </div>
             <div class="img-border">
-                <img src="/assets/img/boder/map.jpg" alt="map">
+                <img src="./assets/img/boder/map.jpg" alt="map">
             </div>
-          
             
         </div>
         <footer>
             <div class="icon">
-                <i class="ti-gift"></i>
-                <i class="ti-money"></i>
-                <i class="ti-shield"></i>
-                <i class="ti-help"></i>
-                <i class="ti-basketball"></i>
-                <i class="ti-slice"></i>
+                <i class="ti-facebook"></i>
+                <i class="ti-linkedin"></i>
+                <i class="ti-instagram"></i>
+                <i class="ti-twitter-alt"></i>
+                <i class="ti-pinterest"></i>
+                <i class="ti-youtube"></i>
             </div>
             <div class="text-footer">
                 <p>Powered by <a href="https://www.w3schools.com/"> w3.css</a></p>
@@ -203,18 +205,52 @@
             </div>
         </div>
     </div>
+    
     <script> 
     const buyBtns =document.querySelectorAll('.js-buy-tickets')
     const modal=document.querySelector('.tickets-modal')
     const closeBtns =document.querySelectorAll('.js-close-tickets')
     const modalContainer =document.querySelector('.js-modal-container')
+    const header = document.querySelector('.header');
+    var mobileMenu =document.getElementById('mobile-menu');
+    var headHeight =header.clientHeight;
+    var menuItems =document.querySelectorAll('#nav li a[href*="#"]');
+ 
+    mobileMenu.onclick =function(){
+        var isClose =header.clientHeight===headHeight;
+        if(isClose){
+        header.style.height='auto';
+        }
+        else{
+            header.style.height=null;
+        }
+    }
+    
+    function hideMenuItem() {
+        header.style.height=null;
+    }
+    for(const menuItem of menuItems) {
+    var isParentMenu = menuItem.nextElementSibling && menuItem.nextElementSibling.classList.contains('subnav');
+        if(isParentMenu){
+            menuItem.addEventListener('click',function(event){
+                event.preventDefault();
+            });
+
+        }
+        else{
+            menuItem.addEventListener('click',hideMenuItem);
+        }
+    }
+
+
+
     function showBuyTickets(){
         
         modal.classList.add('open')
         
     }
     for(const buyBtn of buyBtns) {
-        buyBtn.addEventListener('click',showBuyTickets)
+        buyBtn.addEventListener('click',showBuyTickets);
     }
     function hideBuyTickets(){
         
@@ -222,11 +258,11 @@
         
     }
     for(const closeBtn of closeBtns) {
-        closeBtn.addEventListener('click',hideBuyTickets)
+        closeBtn.addEventListener('click',hideBuyTickets);
     }
     modal.addEventListener('click',hideBuyTickets)
     modalContainer.addEventListener('click',function(event){
-        event.stopPropagation()
+        event.stopPropagation();
     })
     </script>
 </body>

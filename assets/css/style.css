@@ -15,16 +15,16 @@
     color: white !important;
 }
 html{
+    scroll-behavior: smooth;
     font-family: 'Times New Roman', Times, serif;
     font-size: 15x;
+    /* background-color: #ffffff; */
 }
-.clear{
-    clear: both;
-}
+
 .main{
    
     height:auto;
-    
+
 
 }
 .row{
@@ -50,21 +50,21 @@ html{
 .header{
     --height:46px;
     height: var(--height);
-    width: 1001%;
+    width: 100%;
     background-color:rgb(0, 0, 0);
     position:fixed;
     top:0px;
     z-index: 1;
     font-size: 15px;
     animation: headerFadeIn ease 1s;
-   
-    
-    
-}
+
+}   
+
 .nav-arrow-down{
     font-size:14px;
 }
-.header .search-bth{
+.header .menu-mobile-bth
+{
     
     color:white;
     font-size: 15px;
@@ -74,11 +74,68 @@ html{
     cursor:pointer;
     
 }
-.header .search-bth:hover{
-    background-color: rgba(255, 13, 13, 0.534);
-            box-shadow:0 0 12px rgba(255, 0, 0, 0.568);
-    border-top-left-radius: 10%;
-    border-bottom-left-radius: 10%;
+.header .search-box{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ffffff;
+    height: 46px;
+    border-radius: 40px;
+    margin-right: 10px;
+    /* padding: 3px; */
+}
+.header .search-box .search-bth{
+    
+    text-decoration: none;
+    color:rgb(255, 16, 16);
+    font-size: 15px;
+    width: 46px;
+    float: right;
+    line-height: 46px;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    padding: 0 17px;
+    cursor:pointer;
+    background-color: #88b6ac7c;
+    border-radius: 50%;
+}
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 46px;
+    width: 0px;
+    
+
+}
+
+.search-box:hover > .search-txt{
+    width: 240px;
+    padding: 0 26px;
+    box-sizing: border-box;
+
+}
+.header .menu-mobile-bth{
+    display: none;
+    position: absolute;
+    top:0;
+    right: 0;
+    transform: 0.4s;
+}
+
+.header .menu-mobile-bth:hover,
+.header .search-box:hover > .search-bth{
+    background-color: rgb(255, 255, 255);
+    box-shadow:  5px 10px 10px #0e0b0b;
+
+    /* box-shadow:0 0 12px rgba(228, 150, 49, 0.568); */
+    ;
 }
 #nav{
     padding: 0px;
@@ -110,7 +167,7 @@ html{
     box-shadow:0px 0 30px rgba(24, 23, 23, 0.514);
 }
 #nav .subnav li {
-   background-color: white;
+   background-color: white;                     
     color: black;
     
 }
@@ -135,7 +192,8 @@ html{
 
  #slider{
     margin-top:46px;
-    min-width: 500px;
+
+    width: 100wh;
     padding-top: 50%;
     background:url(../img/slider/img2.jpg) top center / cover no-repeat;        
     position: relative;
@@ -143,6 +201,7 @@ html{
 #slider .text-content{
     position: absolute;
     bottom: 0;
+    /* background-color: white; */
     color: white;
     padding: 32px;
     margin: 15px;
@@ -162,10 +221,12 @@ html{
     
 }
 .content .content-section{
+    
     height:fit-content;
     text-align: center;
     padding: 64px 16px;
     width: 800px;
+    max-width: 100%;
     margin-left:  auto;
     margin-right: auto;
     
@@ -175,6 +236,8 @@ html{
     clear: both;
 }
 .section-heading{
+    /* background-image: linear-gradient(#fff,red 20%); */
+    
     margin: 10px 0;
     text-transform:uppercase ;
     line-height: 45px;
@@ -184,6 +247,7 @@ html{
 }  
     
 .section-sub-heading{
+    
     width: 100%;
     font-size: 22px;
     margin: 15px 0;
@@ -210,12 +274,25 @@ html{
     
     text-align: center;
 }
-.member .box-member .name{
-    margin: 15px 0;
+
+.box-name .name{
+    /* display: none; */
+    position: absolute;
+    color: #e9b014;
     font-size: 20px;
-    line-height: 22.5px;
+    transition: all .5s ease-in-out;
+    left: 40%;
+    top: -10%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(45deg,  rgb(150, 166, 211),  rgb(219, 93, 93));
+   
+
     
 }
+
+
 
 .imgband{
     margin-bottom: 20px;
@@ -223,13 +300,41 @@ html{
     min-width: calc(100%-31px);
     height: auto;
     border-radius: 10%;
+    transition: all .4s, filter .5s linear;
+    transform-origin: center center;
+    filter: brightness(100%);
+    /* display: none; */
     
 }
-.imgband:hover{
+.box-name{
+    height: 300px;
+    margin-bottom: 30px;
+    position: relative;
+    
+
+}
+.box-name:hover>.imgband{
     width: 220px;
     margin-bottom: 0;
-    
+    transform:translateY(-1rem) rotate(3deg);  
+    filter: brightness(60%);
+    /* display: none; */
+    /* transform: scale(1.2); */
+   
 }
+
+.box-name:hover>.name{
+    position: absolute;
+    font-weight: 800;
+    z-index: 2;
+    top: 20%;
+    left: 40%;
+    transform:scale(2);
+    text-shadow:  2px 19px 9px #0e0a0a;
+
+}
+
+
 
 .content .tour-section{
     background-color: black;
@@ -256,13 +361,17 @@ html{
     margin-left: 16px;
     padding: 0 8px;
 }
+.date{
+    font-weight: 900;
+    /* text-shadow: 0px 2px 0px #0cff20; */
+    color: #068d43;
+}
 .date .number{
     width: 24px;
     height: 24px;
     font-size: 12px;
     opacity: 1 !important;
     background-color: black;
-   
     padding: 0 8px;
     text-align: center;
     border-radius: 50%;
@@ -311,14 +420,20 @@ html{
     font-weight: 600;
     text-decoration: none;
     border-radius: 20px;
+    background-image: linear-gradient( 45deg,  rgb(82, 241, 207),  green);
+
+    transition: all 1s ease-in-out ;
+
   
 }
 .buy-tickets:hover{
     color: black;
-    background-color: rgba(255, 255, 255, 0.973);
-    animation: colorFadeIn  2s infinite;
+    background-image: linear-gradient( 45deg,  green ,rgb(82, 241, 207));
+
+
+    /* animation: colorFadeIn  .8s ease-in-out infinite;
     animation-direction:alternate-reverse;
- 
+  */
 }
 .tickets-modal.open{
     display: flex;
@@ -453,12 +568,13 @@ input{
     background-color: black;
     color: white;
     float: right;
+    cursor: pointer;    
 
 }
 .img-border>img{
     width: 100%;
-    filter: grayscale(0.5);
-  
+    filter: grayscale(0.6);
+
 }
 footer{
     padding: 64px 16px;
@@ -473,6 +589,7 @@ footer{
     font-weight: 800;
     
 }
+
 @Keyframes modalFadeIn {
     from{
         transform: translateY(-100px);
@@ -482,12 +599,21 @@ footer{
         opacity: 1;
         transform: translateY(0px);
     }
+}
 
-}
 @keyframes colorFadeIn  {
-    from {background-color: red;}
-  to {background-color: yellow;}
+    from{
+        
+        background-image: linear-gradient( 45deg,  rgb(82, 241, 207),  green);
+        }
+    /* 50%{
+        background-image: linear-gradient( 45deg,green, rgb(82, 241, 207),green);
+        } */
+    to{
+        background-image: linear-gradient( 45deg,  green ,rgb(82, 241, 207));
+    }
 }
+
 @Keyframes headerFadeIn {
     from{
         transform: translateY(-200px);
@@ -496,6 +622,16 @@ footer{
         transform: translateY(0px);
     }
 }
+@Keyframes changeName {
+    from{
+        transform:translate(50%,200px);
+
+    }
+    to{
+        transform: translate(20px,200px);
+    }
+}
+
 @Keyframes backgroudFadeIn {
 
 from{
@@ -505,4 +641,64 @@ to{
     background-image:linear-gradient(  rgba(161, 36, 36, 0.623) to rgba(215, 86, 247, 0.658));
 }
 
+}
+
+@media (max-width:740px) {  
+    .header{
+        overflow: hidden    ;
+     }
+    .header .search-bth{
+        display: none;
+    }
+    #nav>li:first-child
+    {
+        display: inline-block
+    }
+    .col{
+        width: 100%;
+    }
+    .header .menu-mobile-bth{
+        display: inherit;
+    }
+    #nav {
+        display: block;
+    }
+     #nav >li{
+    display: block;
+     }
+     #nav .subnav{
+        display: block;
+        position:initial;
+     }
+     #nav .subnav a{
+        color: white;
+        background-color: #333;
+        padding: 5px 50px;
+
+     }
+    
+   
+    .box-name{
+        position: relative;
+    }
+    .box-name .name{
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transition: all 1s ease-in-out;
+        opacity: 0;
+        text-decoration: none;
+    }
+    .box-name:hover>.name{
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-image: linear-gradient( to right,  rgb(82, 241, 207),  green);
+        text-shadow: 0px 10px 10px #201919;
+        font-weight: 700;
+        opacity: 1;
+        left: 10%; 
+        transform:scale(1.2)
+    }
+    
 }
