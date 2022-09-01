@@ -84,6 +84,12 @@ html{
     margin-right: 10px;
     /* padding: 3px; */
 }
+.w3s{
+    color: rgb(157, 35, 228);
+    font-size: 30px;
+    text-shadow: 2px 2px 10px #0e0a0a;
+    text-decoration: none;
+}
 .header .search-box .search-bth{
     
     text-decoration: none;
@@ -676,7 +682,7 @@ to{
         padding: 5px 50px;
 
      }
-    
+
    
     .box-name{
         position: relative;
