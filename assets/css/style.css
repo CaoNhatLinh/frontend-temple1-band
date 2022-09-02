@@ -84,12 +84,11 @@ html{
     margin-right: 10px;
     /* padding: 3px; */
 }
-.linkBy{
-   color: rgb(231, 188, 46);
+.link{
+    color: rgb(231, 188, 46);
     font-size: 25px;
     text-shadow: 0px 0px  2px #f1b40b;
     text-decoration: none;
-    
 }
 .header .search-box .search-bth{
     
